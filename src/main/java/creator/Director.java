@@ -22,6 +22,7 @@ public  class Director extends aCreator{
     public List<Movie> getMovies(){
         return this.movies;
     }
+    @Override
     public String getName() {
         return name;
     }

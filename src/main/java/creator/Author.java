@@ -16,6 +16,7 @@ public class Author extends aCreator {
         books = new ArrayList<>();
     }
 
+    @Override
     public String getName(){
         return this.name;
     }
