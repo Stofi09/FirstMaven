@@ -1,0 +1,16 @@
+
+*library.Library#getMovies()Ljava/util/Map;S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java; ;(&"1*ì
+1S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java< <(Ÿ
+œ
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java< <(!
+%0java.util.HashMap"__id*&*$
+library.Library"
+moviesByTitle"p
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java< <("
+
+%0java.util.HashMapB
+library.Library

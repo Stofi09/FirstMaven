@@ -1,0 +1,31 @@
+
+)library.Library#checkEBook(Litem/aBook;)ZS
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javai i("1*‹
+1S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javaj j(Ÿ
+œ
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javaj j(!
+%0java.util.HashMap"__id*&*$
+library.Library"
+eBooksByTitle»¸
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javaj. j(=
+%1java.lang.String"'item.aBook#getTitle()Ljava/lang/String;*
+
+book
+item.aBook2
+getTitle()ñî
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javaj j(>
+%2boolean"2java.util.HashMap#containsKey(Ljava/lang/Object;)Z*
+
+%0java.util.HashMap*
+
+%1java.lang.String2containsKey(Ljava/lang/Object;)"]
+S
+IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.javaj j(?
+"":
+book
+item.aBookB
+library.Library
