@@ -3,6 +3,7 @@ package library;
 import item.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public  class Library {
 
@@ -49,16 +50,16 @@ public  class Library {
         this.movieForKidsByTitle.put(movie.getTitle(),movie);
     }
 
-    public HashMap<String,aBook> getBooks() {
+    public Map<String,aBook> getBooks() {
         return this.booksByTitle;
     }
-    public HashMap<String,EBook> getEBooks() {
+    public Map<String,EBook> getEBooks() {
         return this.eBooksByTitle;
     }
-    public HashMap<String,Movie> getMovies() {
+    public Map<String,Movie> getMovies() {
         return this.moviesByTitle;
     }
-    public HashMap<String, MovieForKids> getMovieForKid(){return this.movieForKidsByTitle;}
+    public Map<String, MovieForKids> getMovieForKid(){return this.movieForKidsByTitle;}
 
     /*How to reuse the check/ rent methods? .getClass???*/
     public void rentEBook(aBook book){

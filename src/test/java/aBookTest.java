@@ -48,7 +48,7 @@ public class aBookTest {
         aCreator DanA = new Author("Dan Abnett");
         aBook Saturnine = new Book (123,"Saturnine", (Author) DanA,BookType.FICTION);
         Saturnine.borrowItem();
-        assertEquals("Not borrowed",Saturnine.getAvailability(),false);
+        assertEquals("Not borrowed",false,Saturnine.getAvailability());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class aBookTest {
         aBook Saturnine = new Book (123,"Saturnine", (Author) DanA,BookType.FICTION);
         Saturnine.borrowItem();
         Saturnine.setAvailable();
-        assertEquals("Not available",Saturnine.getAvailability(),true);
+        assertEquals("Not available",true,Saturnine.getAvailability());
     }
 
     @Test

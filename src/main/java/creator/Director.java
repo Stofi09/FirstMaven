@@ -13,7 +13,7 @@ public  class Director extends aCreator{
     public Director(String name){
         this.name = name;
         this.movies = new ArrayList<>();
-    };
+    }
 
     public void addMovie(Movie movie){
             this.movies.add(movie);

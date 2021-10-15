@@ -6,5 +6,5 @@ public enum BookType {
     String name;
     BookType(String name){
         this.name = name;
-    };
+    }
 }

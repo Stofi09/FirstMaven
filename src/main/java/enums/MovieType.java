@@ -7,5 +7,5 @@ public enum MovieType {
     String name;
     MovieType(String name){
         this.name = name;
-    };
+    }
 }
