@@ -77,7 +77,7 @@ public class LibraryTest {
         aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         lib.addBook(EffectiveJava);
         lib.rentBook(EffectiveJava);
-        assertEquals("Not been rented",lib.getBooks().get(EffectiveJava.getTitle()).getAvailability(),false);
+        assertEquals("Not been rented",false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
     }
     @Test
     public void testRentEBook(){
@@ -86,7 +86,7 @@ public class LibraryTest {
         aBook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);lib.addBook(EffectiveJava);
         lib.rentEBook(EffectiveJava);
-        assertEquals("Not been rented",lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability(),false);
+        assertEquals("Not been rented",false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
     }
 
     @Test
@@ -96,7 +96,7 @@ public class LibraryTest {
         Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) MichaelB);
         lib.addMovie(PearlHarbour);
         lib.rentMovie(PearlHarbour);
-        assertEquals("Not been rented",lib.getMovies().get(PearlHarbour.getTitle()).getAvailability(),false);
+        assertEquals("Not been rented",false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability());
     }
 
     @Test
@@ -106,7 +106,7 @@ public class LibraryTest {
         MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) MichaelB);
         lib.addMovieForKids(Madagascar);
         lib.rentMovie(Madagascar);
-        assertEquals("Not been rented",lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability(),false);
+        assertEquals("Not been rented",false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability());
     }
 
 

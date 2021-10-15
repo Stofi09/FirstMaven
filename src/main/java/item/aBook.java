@@ -12,7 +12,7 @@ public abstract class aBook extends Item {
 
 
 
-    public aBook(long ISBN, String title, Author author,Enum type){
+    protected aBook(long ISBN, String title, Author author,Enum type){
         super();
         this.ISBN = ISBN;
         this.title = title;
@@ -26,6 +26,7 @@ public abstract class aBook extends Item {
         return ISBN;
     }
 
+    @Override
     public String getTitle() {
         return title;
     }
