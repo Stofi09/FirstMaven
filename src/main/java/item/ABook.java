@@ -5,14 +5,14 @@ import creator.Author;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class aBook extends Item {
+public abstract class ABook extends Item {
 
     protected long ISBN;
     protected List<Author> authors;
 
 
 
-    protected aBook(long ISBN, String title, Author author,Enum type){
+    protected ABook(long ISBN, String title, Author author, Enum type){
         super();
         this.ISBN = ISBN;
         this.title = title;

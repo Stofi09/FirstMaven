@@ -2,7 +2,7 @@ import creator.Author;
 import creator.aCreator;
 import enums.BookType;
 import item.Book;
-import item.aBook;
+import item.ABook;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,9 +20,9 @@ public class AuthorTest {
     @Test
     public void testDirectorBooks(){
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         ((Author) JoshuaB).addBook(EffectiveJava);
-        List<aBook> books = new ArrayList<>();
+        List<ABook> books = new ArrayList<>();
         books.add(EffectiveJava);
         assertEquals("The movie was wrong",books,((Author) JoshuaB).getBooks());
     }

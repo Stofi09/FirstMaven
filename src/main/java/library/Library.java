@@ -12,7 +12,7 @@ public  class Library {
 
 
 
-    private HashMap<String, aBook> booksByTitle;
+    private HashMap<String, ABook> booksByTitle;
     private HashMap<String, Movie> moviesByTitle;
     private HashMap<String, EBook> eBooksByTitle;
     private HashMap<String, MovieForKids> movieForKidsByTitle;
@@ -39,7 +39,7 @@ public  class Library {
         this.movieForKidsByTitle = new HashMap<>();
     }
 
-    public void addBook(aBook book) {
+    public void addBook(ABook book) {
         this.booksByTitle.put(book.getTitle(),book);
     }
     public void addEBook(EBook book){
@@ -52,7 +52,7 @@ public  class Library {
         this.movieForKidsByTitle.put(movie.getTitle(),movie);
     }
 
-    public Map<String,aBook> getBooks() {
+    public Map<String, ABook> getBooks() {
         return this.booksByTitle;
     }
     public Map<String,EBook> getEBooks() {
@@ -64,7 +64,7 @@ public  class Library {
     public Map<String, MovieForKids> getMovieForKid(){return this.movieForKidsByTitle;}
 
     /*How to reuse the check/ rent methods? .getClass???*/
-    public void rentEBook(aBook book){
+    public void rentEBook(ABook book){
         if(checkEBook(book)){
             this.eBooksByTitle.get(book.getTitle()).borrowItem();
             System.out.println("Here is the book: " + book);
@@ -73,7 +73,7 @@ public  class Library {
         }
     }
 
-    public void rentBook(aBook book){
+    public void rentBook(ABook book){
            if(checkBook(book)){
                if(this.booksByTitle.get(book.getTitle()).getAvailability()){
                    this.booksByTitle.get(book.getTitle()).borrowItem();
@@ -104,11 +104,11 @@ public  class Library {
     }
 
 
-    private boolean checkEBook(aBook book){
+    private boolean checkEBook(ABook book){
         return this.eBooksByTitle.containsKey(book.getTitle());
     }
 
-    private boolean checkBook(aBook book){
+    private boolean checkBook(ABook book){
         return (this.booksByTitle.containsKey(book.getTitle()));
     }
    private boolean checkMovie(Movie movie){

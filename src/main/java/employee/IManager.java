@@ -1,6 +1,6 @@
 package employee;
 
-public interface iManager {
+public interface IManager {
 
     public boolean removeCustomer();
 }

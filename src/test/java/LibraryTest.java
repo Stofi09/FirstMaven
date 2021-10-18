@@ -32,7 +32,7 @@ public class LibraryTest {
         aCreator JoshuaB = new Author("Joshua Block");
         Book EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         lib.addBook(EffectiveJava);
-        HashMap<String, aBook> books = new HashMap<>();
+        HashMap<String, ABook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(),EffectiveJava);
         assertEquals("Something wrong with the map",books,lib.getBooks());
     }
@@ -41,7 +41,7 @@ public class LibraryTest {
     public void testEBookMap(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);
         HashMap<String, EBook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(), (EBook) EffectiveJava);
@@ -74,7 +74,7 @@ public class LibraryTest {
     public void testRentBook(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         lib.addBook(EffectiveJava);
         lib.rentBook(EffectiveJava);
         assertEquals("Not been rented",false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
@@ -84,7 +84,7 @@ public class LibraryTest {
     public void testRentBookNull(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         lib.rentBook(EffectiveJava);
         assertEquals("Not been rented",null,lib.getBooks().get(EffectiveJava.getTitle()));
     }
@@ -93,7 +93,7 @@ public class LibraryTest {
     public void testRentEBook(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);lib.addBook(EffectiveJava);
         lib.rentEBook(EffectiveJava);
         assertEquals("Not been rented",false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
@@ -103,7 +103,7 @@ public class LibraryTest {
     public void testRentEBookNull(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
         lib.rentEBook(EffectiveJava);
         assertEquals("Not been rented",null,lib.getEBooks().get(EffectiveJava.getTitle()));
     }

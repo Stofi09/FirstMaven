@@ -2,7 +2,7 @@ package item;
 
 import creator.Author;
 
-public class EBook extends aBook{
+public class EBook extends ABook {
 
     private String link;
 

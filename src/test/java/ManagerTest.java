@@ -1,5 +1,5 @@
 import employee.Manager;
-import employee.iManager;
+import employee.IManager;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -10,7 +10,7 @@ public class ManagerTest {
 
     @Test
     public void managerRemove(){
-        iManager mgr = new Manager("name", LocalDate.now());
+        IManager mgr = new Manager("name", LocalDate.now());
         assertEquals("cant remove", false,mgr.removeCustomer());
     }
 }

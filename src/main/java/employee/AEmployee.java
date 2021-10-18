@@ -2,12 +2,12 @@ package employee;
 
 import java.time.LocalDate;
 
-public abstract class aEmployee {
+public abstract class AEmployee {
 
     protected String name;
     protected LocalDate startOfEmployment;
 
-    protected aEmployee(String name, LocalDate date){
+    protected AEmployee(String name, LocalDate date){
         this.name = name;
         this.startOfEmployment = date;
     }

@@ -1,6 +1,6 @@
 package creator;
 
-import item.aBook;
+import item.ABook;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 public class Author extends aCreator {
 
     private  String name;
-    private List<aBook> books;
+    private List<ABook> books;
 
     public Author(String name) {
         this.name = name;
@@ -21,11 +21,11 @@ public class Author extends aCreator {
         return this.name;
     }
 
-    public void addBook(aBook book){
+    public void addBook(ABook book){
         books.add(book);
     }
 
-    public List<aBook> getBooks(){
+    public List<ABook> getBooks(){
         return this.books;
     }
 
