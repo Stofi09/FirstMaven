@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - src # or the name of your main branch
-
 jobs:
   build:
     name: Build
