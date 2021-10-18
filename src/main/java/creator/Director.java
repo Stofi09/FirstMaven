@@ -11,6 +11,7 @@ public  class Director extends aCreator{
     private List<Movie> movies;
 
     public Director(String name){
+        super();
         this.name = name;
         this.movies = new ArrayList<>();
     }
