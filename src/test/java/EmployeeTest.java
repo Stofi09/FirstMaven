@@ -1,5 +1,5 @@
-import Employee.RegularEmployee;
-import Employee.aEmployee;
+import employee.RegularEmployee;
+import employee.aEmployee;
 import org.junit.Test;
 
 import java.time.LocalDate;

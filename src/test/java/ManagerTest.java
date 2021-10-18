@@ -1,6 +1,5 @@
-import Employee.Manager;
-import Employee.aEmployee;
-import Employee.iManager;
+import employee.Manager;
+import employee.iManager;
 import org.junit.Test;
 
 import java.time.LocalDate;
