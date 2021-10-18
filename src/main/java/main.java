@@ -12,7 +12,7 @@ import java.util.List;
 public class main {
 
     public static void main(String[] args) {
-        aCreator JoshuaB = new Author("Joshua Block");
+     /*   aCreator JoshuaB = new Author("Joshua Block");
         aCreator DanA = new Author("Dan Abnett");
 
         // init Directors
@@ -71,6 +71,7 @@ public class main {
         List<Library> libraries = new ArrayList<>();
         libraries.add(EdinburghLibrary);
         libraries.add(GlasgowLibrary);
+        */
     }
 
     // Lookingfor books in multiple libraries
