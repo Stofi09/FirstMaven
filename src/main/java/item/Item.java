@@ -1,8 +1,5 @@
 package item;
 
-import enums.BookType;
-import enums.MovieType;
-
 import java.time.LocalDate;
 
 public abstract class Item {

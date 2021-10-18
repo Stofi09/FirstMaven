@@ -1,8 +1,7 @@
 import creator.Author;
 import creator.Director;
 import creator.aCreator;
-import enums.BookType;
-import enums.MovieType;
+import enums.Genre;
 
 import item.*;
 import library.Library;
@@ -30,7 +29,7 @@ public class LibraryTest {
     public void testBookMap(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        Book EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        Book EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.addBook(EffectiveJava);
         HashMap<String, ABook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(),EffectiveJava);
@@ -41,7 +40,7 @@ public class LibraryTest {
     public void testEBookMap(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);
         HashMap<String, EBook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(), (EBook) EffectiveJava);
@@ -52,7 +51,7 @@ public class LibraryTest {
     public void testMovieMap(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) MichaelB);
+        Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.addMovie(PearlHarbour);
         HashMap<String, Movie> movies = new HashMap<>();
         movies.put(PearlHarbour.getTitle(), PearlHarbour);
@@ -63,7 +62,7 @@ public class LibraryTest {
     public void testMovieForKidsMap(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) MichaelB);
+        MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.addMovieForKids(Madagascar);
         HashMap<String, MovieForKids> movies = new HashMap<>();
         movies.put(Madagascar.getTitle(), Madagascar);
@@ -74,7 +73,7 @@ public class LibraryTest {
     public void testRentBook(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.addBook(EffectiveJava);
         lib.rentBook(EffectiveJava);
         assertEquals("Not been rented",false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
@@ -84,7 +83,7 @@ public class LibraryTest {
     public void testRentBookNull(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.rentBook(EffectiveJava);
         assertEquals("Not been rented",null,lib.getBooks().get(EffectiveJava.getTitle()));
     }
@@ -93,7 +92,7 @@ public class LibraryTest {
     public void testRentEBook(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);lib.addBook(EffectiveJava);
         lib.rentEBook(EffectiveJava);
         assertEquals("Not been rented",false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
@@ -103,7 +102,7 @@ public class LibraryTest {
     public void testRentEBookNull(){
         Library lib = new Library("Name","Address");
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.rentEBook(EffectiveJava);
         assertEquals("Not been rented",null,lib.getEBooks().get(EffectiveJava.getTitle()));
     }
@@ -112,7 +111,7 @@ public class LibraryTest {
     public void testRentMovie(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) MichaelB);
+        Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.addMovie(PearlHarbour);
         lib.rentMovie(PearlHarbour);
         assertEquals("Not been rented",false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability());
@@ -122,7 +121,7 @@ public class LibraryTest {
     public void testRentMovieNull(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) MichaelB);
+        Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.rentMovie(PearlHarbour);
         assertEquals("Not been rented",null,lib.getMovies().get(PearlHarbour.getTitle()));
     }
@@ -131,7 +130,7 @@ public class LibraryTest {
     public void testRentMovieForKids(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) MichaelB);
+        MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.addMovieForKids(Madagascar);
         lib.rentMovie(Madagascar);
         assertEquals("Not been rented",false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability());
@@ -141,7 +140,7 @@ public class LibraryTest {
     public void testRentMovieForKidsNull(){
         Library lib = new Library("Name","Address");
         aCreator MichaelB = new Director("Michael Bay");
-        MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) MichaelB);
+        MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.rentMovie(Madagascar);
         assertEquals("Not been rented",null,lib.getMovieForKid().get(Madagascar.getTitle()));
     }

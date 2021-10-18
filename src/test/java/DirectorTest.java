@@ -1,6 +1,6 @@
 import creator.Director;
-import enums.MovieType;
 
+import enums.Genre;
 import item.Movie;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ public class DirectorTest {
     @Test
     public void testDirectorMovies(){
         Director dir = new Director("Ben");
-        Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) dir);
+        Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) dir);
         dir.addMovie(PearlHarbour);
         List<Movie> movies = new ArrayList<>();
         movies.add(PearlHarbour);

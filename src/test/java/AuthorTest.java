@@ -1,6 +1,6 @@
 import creator.Author;
 import creator.aCreator;
-import enums.BookType;
+import enums.Genre;
 import item.Book;
 import item.ABook;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class AuthorTest {
     @Test
     public void testDirectorBooks(){
         aCreator JoshuaB = new Author("Joshua Block");
-        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
+        ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         ((Author) JoshuaB).addBook(EffectiveJava);
         List<ABook> books = new ArrayList<>();
         books.add(EffectiveJava);
