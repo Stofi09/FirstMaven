@@ -5,5 +5,7 @@ BookForKidstest.class
 DirectorTest.class
 EBookForKidsTest.class
 AuthorTest.class
+aCreatorTest.class
+aCreatorTest$1.class
 EBookTest.class
 MovieForKidsTest.class

@@ -1,16 +1,0 @@
-
-*library.Library#getEBooks()Ljava/util/Map;S
-IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java8 8(&"1*ì
-1S
-IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java9 9(Ÿ
-œ
-S
-IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java9 9(!
-%0java.util.HashMap"__id*&*$
-library.Library"
-eBooksByTitle"p
-S
-IC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/library/Library.java9 9("
-
-%0java.util.HashMapB
-library.Library

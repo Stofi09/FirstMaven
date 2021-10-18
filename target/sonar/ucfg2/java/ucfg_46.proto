@@ -1,127 +1,0 @@
-
-'item.Movie#toString()Ljava/lang/String;N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java ("1*≠
-1N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (é
-ã
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (
-%0java.lang.String"__concat*
-
-Movie{*	
-title='å
-â
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (!
-%1java.lang.String"__id**
-
-item.Movie"
-title©
-¶
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (!
-%2java.lang.String"__concat*
-
-%0java.lang.String*
-
-%1java.lang.Stringó
-î
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java ((
-%3java.lang.String"__concat*
-
-%2java.lang.String*
-\'ú
-ô
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (
-%4java.lang.String"__concat*
-
-%3java.lang.String*	
-, type=â
-Ü
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java ( 
-%5java.lang.Enum"__id**
-
-item.Movie"
-typeß
-§
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java ( 
-%6java.lang.String"__concat*
-
-%4java.lang.String*
-
-%5java.lang.Enum§
-°
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (!
-%7java.lang.String"__concat*
-
-%6java.lang.String*
-, timeTakenOut=ñ
-ì
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java$ (0
-%8java.time.LocalDate"__id* *
-
-item.Movie"
-timeTakenOut¨
-©
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java (0
-%9java.lang.String"__concat*
-
-%7java.lang.String*
-
-%8java.time.LocalDate§
-°
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java  ( 
-%10java.lang.String"__concat*
-
-%9java.lang.String*
-, isAvailable=ô
-ñ
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java  (.
-%11java.lang.String"__concat*
-
-%10java.lang.String*
-""£
-†
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java !(
-%12java.lang.String"__concat*
-
-%11java.lang.String*
-, directors=è
-å
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java!! !(*
-%13java.util.List"__id**
-
-item.Movie"
-	directors™
-ß
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java !(*
-%14java.lang.String"__concat*
-
-%12java.lang.String*
-
-%13java.util.Listò
-ï
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java "(
-%15java.lang.String"__concat*
-
-%14java.lang.String*
-}"k
-N
-DC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/item/Movie.java "(
-
-%15java.lang.StringB
-
-item.Movie
