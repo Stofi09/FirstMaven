@@ -1,71 +1,0 @@
-
--creator.Director#toString()Ljava/lang/String;T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java   ("1*Ù
-1T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! !(ñ
-ì
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! "(
-%0java.lang.String"__concat*
-	Director{*
-
-name='ó
-î
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java" "(
-%1java.lang.String"__id**
-creator.Director"
-nameØ
-¨
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! "(
-%2java.lang.String"__concat*
-
-%0java.lang.String*
-
-%1java.lang.Stringù
-ö
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! "(&
-%3java.lang.String"__concat*
-
-%2java.lang.String*
-\'§
-°
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! #(
-%4java.lang.String"__concat*
-
-%3java.lang.String*
-	, movies=ó
-î
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java# #($
-%5java.util.List"__id* *
-creator.Director"
-moviesúô
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java# #(+	
-%6int"java.util.List#size()I*
-
-%5java.util.List2size()¢
-ü
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! #(+
-%7java.lang.String"__concat*
-
-%4java.lang.String*
-	
-%6intú
-ô
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! $(
-%8java.lang.String"__concat*
-
-%7java.lang.String*
-}"p
-T
-JC:/Users/krist/IdeaProjects/FirstMaven/src/main/java/creator/Director.java! $(
-
-%8java.lang.StringB
-creator.Director
