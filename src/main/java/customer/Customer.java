@@ -14,7 +14,7 @@ public class Customer {
     private List<Item> currentItems;
     private List<Library> libraries;
 
-    public Customer(String name, Enum ageType){
+    public Customer(String name, Enum<CustomerAgeType> ageType){
         this.name = name;
         this.ageType = ageType;
         this.currentItems = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Customer {
     public String getName(){
         return this.name;
     }
-    public Enum getAgeType(){
+    public Enum<CustomerAgeType> getAgeType(){
         return this.ageType;
     }
 
@@ -52,7 +52,7 @@ public class Customer {
     }
 
     private boolean checkItem(Item item){
-        return (this.currentItems.contains(item)) ? true : false;
+        return (this.currentItems.contains(item));
     }
 
     public boolean removeLibrary(Library lib){
@@ -66,7 +66,7 @@ public class Customer {
     }
 
     private boolean checkLibrary(Library lib){
-        return (this.libraries.contains(lib)) ? true : false;
+        return (this.libraries.contains(lib));
     }
 
 

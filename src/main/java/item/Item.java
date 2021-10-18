@@ -23,7 +23,7 @@ public abstract class Item {
     public String getTitle() {
         return title;
     }
-    public Enum getType() {
+    public Enum<?> getType() {
         return type;
     }
     public LocalDate getTime() {
