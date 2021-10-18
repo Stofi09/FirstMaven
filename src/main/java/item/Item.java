@@ -1,11 +1,13 @@
 package item;
 
+import enums.Genre;
+
 import java.time.LocalDate;
 
 public abstract class Item {
 
     protected String title;
-    protected Enum<?> type;
+    protected Enum<Genre> type;
     protected LocalDate timeTakenOut;
     protected boolean isAvailable;
 
@@ -20,7 +22,7 @@ public abstract class Item {
     public String getTitle() {
         return title;
     }
-    public Enum<?> getType() {
+    public Enum<Genre> getType() {
         return type;
     }
     public LocalDate getTime() {
