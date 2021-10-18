@@ -1,13 +1,13 @@
 package creator;
 
-public abstract class aCreator {
+public abstract class ACreator {
 
     private String name;
 
-    protected aCreator(String name){
+    protected ACreator(String name){
         this.name = name;
     }
-    protected aCreator() {
+    protected ACreator() {
 
     }
     public String getName() {

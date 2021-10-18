@@ -1,5 +1,5 @@
 import creator.Author;
-import creator.aCreator;
+import creator.ACreator;
 import enums.Genre;
 import item.Book;
 import item.ABook;
@@ -15,21 +15,21 @@ public class aBookTest {
 
     @Test
     public void testABookISBN(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         assertEquals("Something wrong with ISBN",123,Saturnine.getISBN());
     }
 
     @Test
     public void testABookTitle(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         assertEquals("Something wrong with title","Saturnine",Saturnine.getTitle());
     }
 
     @Test
     public void testABookAuthors(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         List<Author> authors = new ArrayList<>();
         authors.add((Author) DanA);
@@ -38,14 +38,14 @@ public class aBookTest {
 
     @Test
     public void testABookType(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         assertEquals("Something wrong with authors", Genre.FICTION,Saturnine.getType());
     }
 
     @Test
     public void testABookBorrow(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
         assertEquals("Not borrowed",false,Saturnine.getAvailability());
@@ -53,7 +53,7 @@ public class aBookTest {
 
     @Test
     public void testABookSetAvailable(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
         Saturnine.setAvailable();
@@ -62,7 +62,7 @@ public class aBookTest {
 
     @Test
     public void testABookTime(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
         assertEquals("Not borrowed",Saturnine.getTime(), LocalDate.now());

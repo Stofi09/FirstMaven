@@ -5,7 +5,7 @@ import item.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class Director extends aCreator{
+public  class Director extends ACreator {
 
     private  String name;
     private List<Movie> movies;

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Author extends aCreator {
+public class Author extends ACreator {
 
     private  String name;
     private List<ABook> books;

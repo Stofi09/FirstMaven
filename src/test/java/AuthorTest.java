@@ -1,5 +1,5 @@
 import creator.Author;
-import creator.aCreator;
+import creator.ACreator;
 import enums.Genre;
 import item.Book;
 import item.ABook;
@@ -13,13 +13,13 @@ public class AuthorTest {
 
     @Test
     public void testAuthorName(){
-        aCreator JoshuaB = new Author("Joshua Block");
+        ACreator JoshuaB = new Author("Joshua Block");
         assertEquals("The name was wrong","Joshua Block",JoshuaB.getName());
     }
 
     @Test
     public void testDirectorBooks(){
-        aCreator JoshuaB = new Author("Joshua Block");
+        ACreator JoshuaB = new Author("Joshua Block");
         ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         ((Author) JoshuaB).addBook(EffectiveJava);
         List<ABook> books = new ArrayList<>();

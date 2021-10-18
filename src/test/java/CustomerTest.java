@@ -1,6 +1,6 @@
 
 import creator.Author;
-import creator.aCreator;
+import creator.ACreator;
 import customer.Customer;
 import enums.Genre;
 import enums.CustomerAgeType;
@@ -28,7 +28,7 @@ public class CustomerTest {
 
     @Test
     public void testItemsAdd() {
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addItem(Saturnine);
@@ -46,7 +46,7 @@ public class CustomerTest {
 
     @Test
     public void testRemoveItemTrue(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addItem(Saturnine);
@@ -55,7 +55,7 @@ public class CustomerTest {
 
     @Test
     public void testRemoveItemFalse(){
-        aCreator DanA = new Author("Dan Abnett");
+        ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         assertEquals("Not in the list", false, cus.removeItem(Saturnine));

@@ -1,5 +1,5 @@
 import creator.Director;
-import creator.aCreator;
+import creator.ACreator;
 import enums.Genre;
 import item.*;
 import org.junit.Test;
@@ -12,7 +12,7 @@ public class MovieTest {
 
     @Test
     public void testMovieDirectors(){
-        aCreator MichaelB = new Director("Michael Bay");
+        ACreator MichaelB = new Director("Michael Bay");
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         List<Director> dir = new ArrayList<>();
         dir.add((Director) MichaelB);
@@ -21,11 +21,11 @@ public class MovieTest {
 
     @Test
     public void testMovieDirectorsAdd(){
-        aCreator MichaelB = new Director("Michael Bay");
+        ACreator MichaelB = new Director("Michael Bay");
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         List<Director> dir = new ArrayList<>();
         dir.add((Director) MichaelB);
-        aCreator MichaelC = new Director("Michael Bay");
+        ACreator MichaelC = new Director("Michael Bay");
         PearlHarbour.addDirector((Director) MichaelC);
         dir.add((Director) MichaelC);
         assertEquals("not the right dir", dir,PearlHarbour.getDirectors());
