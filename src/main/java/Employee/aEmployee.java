@@ -7,7 +7,7 @@ public abstract class aEmployee {
     protected String name;
     protected LocalDate startOfEmployment;
 
-    public aEmployee(String name, LocalDate date){
+    protected aEmployee(String name, LocalDate date){
         this.name = name;
         this.startOfEmployment = date;
     }
