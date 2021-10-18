@@ -51,11 +51,7 @@ public class Customer {
     }
 
     private boolean checkItem(Item item){
-        if (this.currentItems.contains(item)){
-            return true;
-        }else{
-            return false;
-        }
+        return (this.currentItems.contains(item)) ? true : false;
     }
 
     public boolean removeLibrary(Library lib){
@@ -69,11 +65,7 @@ public class Customer {
     }
 
     private boolean checkLibrary(Library lib){
-        if (this.libraries.contains(lib)){
-            return true;
-        }else{
-            return false;
-        }
+        return (this.libraries.contains(lib)) ? true : false;
     }
 
 
