@@ -1,5 +1,6 @@
 package customer;
 
+import enums.CustomerAgeType;
 import item.Item;
 import library.Library;
 
@@ -9,7 +10,7 @@ import java.util.List;
 public class Customer {
 
     private String name;
-    private Enum ageType;
+    private Enum<CustomerAgeType> ageType;
     private List<Item> currentItems;
     private List<Library> libraries;
 
