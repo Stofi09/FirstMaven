@@ -146,5 +146,14 @@ public class LibraryTest {
         assertEquals("Not been rented",null,lib.getMovieForKid().get(Madagascar.getTitle()));
     }
 
+    @Test
+    public void testToString(){
+        Library lib = new Library("Name","Address");
+        aCreator MichaelB = new Director("Michael Bay");
+        MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) MichaelB);
+        lib.addMovieForKids(Madagascar);
+        assertEquals("Not the same", Madagascar,lib.getMovieForKid().get(Madagascar.getTitle()));
+    }
+
 
 }
