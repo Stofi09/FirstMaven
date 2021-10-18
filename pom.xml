@@ -34,7 +34,7 @@
         <sonar.projectKey>Stofi</sonar.projectKey>
 
         <!-- JaCoCo Properties -->
-        <jacoco.version>0.8.3</jacoco.version>
+        <jacoco.version>0.8.7</jacoco.version>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.language>java</sonar.language>
