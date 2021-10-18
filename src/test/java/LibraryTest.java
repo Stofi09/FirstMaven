@@ -80,15 +80,6 @@ public class LibraryTest {
         assertEquals("Not been rented",false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
     }
 
-   /* @Test
-    public void testRentBookNotAvailable(){
-        Library lib = new Library("Name","Address");
-        aCreator JoshuaB = new Author("Joshua Block");
-        aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
-        lib.addBook(EffectiveJava);
-        lib.rentBook(EffectiveJava);
-    }
-*/
     @Test
     public void testRentBookNull(){
         Library lib = new Library("Name","Address");
