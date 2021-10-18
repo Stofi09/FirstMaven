@@ -109,25 +109,13 @@ public  class Library {
     }
 
     private boolean checkBook(aBook book){
-        if(this.booksByTitle.containsKey(book.getTitle())){
-            return true;
-        }else {
-            return false;
-        }
+        return (this.booksByTitle.containsKey(book.getTitle())) ? true : false;
     }
    private boolean checkMovie(Movie movie){
-        if(this.moviesByTitle.containsKey(movie.getTitle())){
-            return true;
-       }else {
-            return false;
-       }
+       return (this.moviesByTitle.containsKey(movie.getTitle())) ? true : false;
    }
     private boolean checkMovie(MovieForKids movie){
-        if(this.movieForKidsByTitle.containsKey(movie.getTitle())){
-            return true;
-        }else {
-            return false;
-        }
+        return (this.movieForKidsByTitle.containsKey(movie.getTitle())) ? true : false;
     }
 
     @Override
