@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class aCreatorTest {
+public class ACreatorTest {
 
     @Test
     public void getNameTest(){

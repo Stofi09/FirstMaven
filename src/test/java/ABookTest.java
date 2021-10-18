@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class aBookTest {
+public class ABookTest {
 
     @Test
     public void testABookISBN(){
