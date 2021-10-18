@@ -4,10 +4,10 @@ public abstract class aCreator {
 
     private String name;
 
-    public aCreator(String name){
+    protected aCreator(String name){
         this.name = name;
     }
-    public aCreator() {
+    protected aCreator() {
 
     }
     public String getName() {
