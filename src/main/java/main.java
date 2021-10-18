@@ -71,8 +71,13 @@ public class main {
         List<Library> libraries = new ArrayList<>();
         libraries.add(EdinburghLibrary);
         libraries.add(GlasgowLibrary);
+    }
 
-
+    // Lookingfor books in multiple libraries
+    public static void findBook(List<Library> libraries, Book book){
+        libraries.stream().forEach(library -> {
+            library.rentBook(book);
+        });
 
     }
 }
