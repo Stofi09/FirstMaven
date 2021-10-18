@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="aBookTest" time="0.021" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="aBookTest" time="0.023" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17+35-LTS-2724"/>
@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="aBookTest" name="testABookISBN" time="0.005"/>
-  <testcase classname="aBookTest" name="testABookTime" time="0.016"/>
+  <testcase classname="aBookTest" name="testABookTime" time="0.018"/>
   <testcase classname="aBookTest" name="testABookType" time="0"/>
   <testcase classname="aBookTest" name="testABookSetAvailable" time="0"/>
   <testcase classname="aBookTest" name="testABookBorrow" time="0"/>
