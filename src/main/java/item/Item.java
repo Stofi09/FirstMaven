@@ -1,11 +1,14 @@
 package item;
 
+import enums.BookType;
+import enums.MovieType;
+
 import java.time.LocalDate;
 
 public abstract class Item {
 
     protected String title;
-    protected Enum type;
+    protected Enum<?> type;
     protected LocalDate timeTakenOut;
     protected boolean isAvailable;
 
