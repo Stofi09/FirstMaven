@@ -6,7 +6,6 @@ public abstract class aEmployee {
 
     protected String name;
     protected LocalDate startOfEmployment;
-    protected Enum employmentType;
 
     public aEmployee(String name, LocalDate date){
         this.name = name;
