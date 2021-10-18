@@ -1,6 +1,7 @@
 package item;
 
 import creator.Director;
+import enums.Genre;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ public class Movie extends Item {
 
     private List<Director> directors;
 
-    public Movie(String title, Enum type,Director director) {
+    public Movie(String title, Enum<Genre> type, Director director) {
         this.title = title;
         this.type = type;
         this.directors = new ArrayList<>();

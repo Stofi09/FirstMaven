@@ -1,6 +1,7 @@
 package item;
 
 import creator.Author;
+import enums.Genre;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ public abstract class ABook extends Item {
 
 
 
-    protected ABook(long ISBN, String title, Author author, Enum type){
+    protected ABook(long ISBN, String title, Author author, Enum<Genre> type){
         super();
         this.ISBN = ISBN;
         this.title = title;
