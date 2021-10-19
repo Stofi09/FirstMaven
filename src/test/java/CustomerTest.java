@@ -17,13 +17,11 @@ public class CustomerTest {
         assertEquals( "Name", cus.getName());
     }
 
-
     @Test
     public void testType() {
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         assertEquals(CustomerAgeType.ADULT, cus.getAgeType());
     }
-
 
     @Test
     public void testItemsAdd() {

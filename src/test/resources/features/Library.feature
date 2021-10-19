@@ -10,3 +10,13 @@ Feature: Test my library
         Given : My library is in "Edinburgh"
         When  : somebody asks whether my library is in "Edinburgh"
         Then  : I should say to him "Yes"
+
+      Scenario Outline: Does the book available?
+        Given I would like to rent "<book>"
+        When  I ask the librarian
+        Then  I should be told "<answer>"
+
+        Examples:
+          | book           | answer |
+          | Effective Java | Yeppers|
+          | Saturnine      | Nope   |
