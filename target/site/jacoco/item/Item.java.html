@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Item.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">FirstMaven</a> &gt; <a href="index.source.html" class="el_package">item</a> &gt; <span class="el_source">Item.java</span></div><h1>Item.java</h1><pre class="source lang-java linenums">package item;
+
+import enums.Genre;
+
+import java.time.LocalDate;
+
+public abstract class Item {
+
+    protected String title;
+    protected Enum&lt;Genre&gt; type;
+    protected LocalDate timeTakenOut;
+    protected boolean isAvailable;
+
+<span class="fc" id="L14">    protected Item() {}</span>
+
+
+    public void borrowItem(){
+<span class="fc" id="L18">        this.setUnAvailable();</span>
+<span class="fc" id="L19">        this.setTime(LocalDate.now());</span>
+<span class="fc" id="L20">    }</span>
+
+    public String getTitle() {
+<span class="fc" id="L23">        return title;</span>
+    }
+    public Enum&lt;Genre&gt; getType() {
+<span class="fc" id="L26">        return type;</span>
+    }
+    public LocalDate getTime() {
+<span class="fc" id="L29">        return timeTakenOut;</span>
+    }
+    private void setTime(LocalDate time) {
+<span class="fc" id="L32">        this.timeTakenOut = time;</span>
+<span class="fc" id="L33">    }</span>
+    protected void setUnAvailable(){
+<span class="fc" id="L35">        this.isAvailable = false;</span>
+<span class="fc" id="L36">    }</span>
+    public void setAvailable(){
+<span class="fc" id="L38">        this.isAvailable = true;</span>
+<span class="fc" id="L39">    }</span>
+    public boolean getAvailability(){
+<span class="fc" id="L41">        return  this.isAvailable;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

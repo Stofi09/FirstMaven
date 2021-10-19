@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Customer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">FirstMaven</a> &gt; <a href="index.source.html" class="el_package">customer</a> &gt; <span class="el_source">Customer.java</span></div><h1>Customer.java</h1><pre class="source lang-java linenums">package customer;
+
+import enums.CustomerAgeType;
+import item.Item;
+import library.Library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer {
+
+    private String name;
+    private Enum&lt;CustomerAgeType&gt; ageType;
+    private List&lt;Item&gt; currentItems;
+    private List&lt;Library&gt; libraries;
+
+<span class="fc" id="L17">    public Customer(String name, Enum&lt;CustomerAgeType&gt; ageType){</span>
+<span class="fc" id="L18">        this.name = name;</span>
+<span class="fc" id="L19">        this.ageType = ageType;</span>
+<span class="fc" id="L20">        this.currentItems = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">        this.libraries = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L22">    }</span>
+
+    public String getName(){
+<span class="fc" id="L25">        return this.name;</span>
+    }
+    public Enum&lt;CustomerAgeType&gt; getAgeType(){
+<span class="fc" id="L28">        return this.ageType;</span>
+    }
+
+    public void addItem(Item item){
+<span class="fc" id="L32">        this.currentItems.add(item);</span>
+<span class="fc" id="L33">    }</span>
+    public List&lt;Item&gt; getItems(){
+<span class="fc" id="L35">        return this.currentItems;</span>
+    }
+    public void addLibrary(Library lib){
+<span class="fc" id="L38">        this.libraries.add(lib);</span>
+<span class="fc" id="L39">    }</span>
+    public List&lt;Library&gt; getLibraries (){
+<span class="fc" id="L41">        return this.libraries;</span>
+    }
+
+    public boolean removeItem(Item item){
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (checkItem(item)){</span>
+<span class="fc" id="L46">            this.currentItems.remove(item);</span>
+<span class="fc" id="L47">            return true;</span>
+        }else{
+<span class="fc" id="L49">            System.out.println(&quot;The customer doesn't have that item &quot; + item);</span>
+<span class="fc" id="L50">            return false;</span>
+        }
+    }
+
+    private boolean checkItem(Item item){
+<span class="fc" id="L55">        return (this.currentItems.contains(item));</span>
+    }
+
+    public boolean removeLibrary(Library lib){
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (checkLibrary(lib)){</span>
+<span class="fc" id="L60">            this.libraries.remove(lib);</span>
+<span class="fc" id="L61">            return true;</span>
+        }else{
+<span class="fc" id="L63">            System.out.println(&quot;The customer doesn't have that library &quot; + lib);</span>
+<span class="fc" id="L64">            return false;</span>
+        }
+    }
+
+    private boolean checkLibrary(Library lib){
+<span class="fc" id="L69">        return (this.libraries.contains(lib));</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
