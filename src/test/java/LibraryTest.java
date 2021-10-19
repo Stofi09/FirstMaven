@@ -5,10 +5,11 @@ import enums.Genre;
 
 import item.*;
 import library.Library;
-import org.junit.Test;
+
 
 import java.util.HashMap;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LibraryTest {
 
@@ -16,13 +17,13 @@ public class LibraryTest {
     @Test
     public void testLibraryName(){
         Library lib = new Library("Name","Address");
-        assertEquals("That is not the right name", "Name",lib.getName());
+        assertEquals( "Name",lib.getName());
     }
 
     @Test
     public void testLibraryAddress(){
         Library lib = new Library("Name","Address");
-        assertEquals("That is not right", "Address",lib.getAddress());
+        assertEquals( "Address",lib.getAddress());
     }
 
     @Test
@@ -33,7 +34,7 @@ public class LibraryTest {
         lib.addBook(EffectiveJava);
         HashMap<String, ABook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(),EffectiveJava);
-        assertEquals("Something wrong with the map",books,lib.getBooks());
+        assertEquals(books,lib.getBooks());
     }
 
     @Test
@@ -44,7 +45,7 @@ public class LibraryTest {
         lib.addEBook((EBook) EffectiveJava);
         HashMap<String, EBook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(), (EBook) EffectiveJava);
-        assertEquals("Something wrong with the map",books,lib.getEBooks());
+        assertEquals(books,lib.getEBooks());
     }
 
     @Test
@@ -55,7 +56,7 @@ public class LibraryTest {
         lib.addMovie(PearlHarbour);
         HashMap<String, Movie> movies = new HashMap<>();
         movies.put(PearlHarbour.getTitle(), PearlHarbour);
-        assertEquals("Something wrong with the map",movies,lib.getMovies());
+        assertEquals(movies,lib.getMovies());
     }
 
     @Test
@@ -66,7 +67,7 @@ public class LibraryTest {
         lib.addMovieForKids(Madagascar);
         HashMap<String, MovieForKids> movies = new HashMap<>();
         movies.put(Madagascar.getTitle(), Madagascar);
-        assertEquals("Something wrong with the map",movies,lib.getMovieForKid());
+        assertEquals(movies,lib.getMovieForKid());
     }
 
     @Test
@@ -76,7 +77,7 @@ public class LibraryTest {
         ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.addBook(EffectiveJava);
         lib.rentBook(EffectiveJava);
-        assertEquals("Not been rented",false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
+        assertEquals(false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
     }
 
     @Test
@@ -85,7 +86,7 @@ public class LibraryTest {
         ACreator JoshuaB = new Author("Joshua Block");
         ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.rentBook(EffectiveJava);
-        assertEquals("Not been rented",null,lib.getBooks().get(EffectiveJava.getTitle()));
+        assertEquals(null,lib.getBooks().get(EffectiveJava.getTitle()));
     }
 
     @Test
@@ -95,7 +96,7 @@ public class LibraryTest {
         ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);lib.addBook(EffectiveJava);
         lib.rentEBook(EffectiveJava);
-        assertEquals("Not been rented",false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
+        assertEquals(false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
     }
 
     @Test
@@ -104,7 +105,7 @@ public class LibraryTest {
         ACreator JoshuaB = new Author("Joshua Block");
         ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.rentEBook(EffectiveJava);
-        assertEquals("Not been rented",null,lib.getEBooks().get(EffectiveJava.getTitle()));
+        assertEquals(null,lib.getEBooks().get(EffectiveJava.getTitle()));
     }
 
     @Test
@@ -114,7 +115,7 @@ public class LibraryTest {
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.addMovie(PearlHarbour);
         lib.rentMovie(PearlHarbour);
-        assertEquals("Not been rented",false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability());
+        assertEquals(false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability());
     }
 
     @Test
@@ -123,7 +124,7 @@ public class LibraryTest {
         ACreator MichaelB = new Director("Michael Bay");
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.rentMovie(PearlHarbour);
-        assertEquals("Not been rented",null,lib.getMovies().get(PearlHarbour.getTitle()));
+        assertEquals(null,lib.getMovies().get(PearlHarbour.getTitle()));
     }
 
     @Test
@@ -133,7 +134,7 @@ public class LibraryTest {
         MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.addMovieForKids(Madagascar);
         lib.rentMovie(Madagascar);
-        assertEquals("Not been rented",false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability());
+        assertEquals(false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability());
     }
 
     @Test
@@ -142,13 +143,13 @@ public class LibraryTest {
         ACreator MichaelB = new Director("Michael Bay");
         MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.rentMovie(Madagascar);
-        assertEquals("Not been rented",null,lib.getMovieForKid().get(Madagascar.getTitle()));
+        assertEquals(null,lib.getMovieForKid().get(Madagascar.getTitle()));
     }
 
     @Test
     public void testToString(){
         Library lib = new Library("Name","Address");
-        assertEquals("Not the same", lib.toString(),lib.toString());
+        assertEquals(lib.toString(),lib.toString());
     }
 
 

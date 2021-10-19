@@ -1,22 +1,22 @@
 import employee.RegularEmployee;
 import employee.AEmployee;
-import org.junit.Test;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.time.LocalDate;
 
-import static org.junit.Assert.assertEquals;
 
 public class EmployeeTest {
 
     @Test
     public void testName(){
         AEmployee emp = new RegularEmployee("name", LocalDate.now());
-        assertEquals("that is not the name", "name", emp.getName());
+        assertEquals( "name", emp.getName());
     }
 
     @Test
     public void testEmploymentDate(){
         AEmployee emp = new RegularEmployee("name", LocalDate.now());
-        assertEquals("that is not the date", LocalDate.now(), emp.getStartOfEmployment());
+        assertEquals( LocalDate.now(), emp.getStartOfEmployment());
     }
 }

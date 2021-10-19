@@ -7,22 +7,21 @@ import enums.CustomerAgeType;
 import item.Book;
 import item.ABook;
 import library.Library;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CustomerTest {
 
     @Test
     public void testName() {
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
-        assertEquals("That is not the name", "Name", cus.getName());
+        assertEquals( "Name", cus.getName());
     }
 
 
     @Test
     public void testType() {
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
-        assertEquals("That is not the type", CustomerAgeType.ADULT, cus.getAgeType());
+        assertEquals(CustomerAgeType.ADULT, cus.getAgeType());
     }
 
 
@@ -33,7 +32,7 @@ public class CustomerTest {
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addItem(Saturnine);
         System.out.println(cus.toString());
-        assertEquals("That is not the book", true, cus.getItems().contains(Saturnine));
+        assertEquals( true, cus.getItems().contains(Saturnine));
     }
 
     @Test
@@ -41,7 +40,7 @@ public class CustomerTest {
         Library lib = new Library("name","address");
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addLibrary(lib);
-        assertEquals("Thats not a lib", true, cus.getLibraries().contains(lib));
+        assertEquals( true, cus.getLibraries().contains(lib));
     }
 
     @Test
@@ -50,7 +49,7 @@ public class CustomerTest {
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addItem(Saturnine);
-        assertEquals("Not in the list", true, cus.removeItem(Saturnine));
+        assertEquals( true, cus.removeItem(Saturnine));
     }
 
     @Test
@@ -58,7 +57,7 @@ public class CustomerTest {
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
-        assertEquals("Not in the list", false, cus.removeItem(Saturnine));
+        assertEquals(false, cus.removeItem(Saturnine));
     }
 
     @Test
@@ -66,13 +65,13 @@ public class CustomerTest {
         Library lib = new Library("name","address");
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
         cus.addLibrary(lib);
-        assertEquals("Not in the list", true, cus.removeLibrary(lib));
+        assertEquals(true, cus.removeLibrary(lib));
     }
 
     @Test
     public void testRemoveLibraryFalse(){
         Library lib = new Library("name","address");
         Customer cus = new Customer("Name", CustomerAgeType.ADULT);
-        assertEquals("Not in the list", false, cus.removeLibrary(lib));
+        assertEquals( false, cus.removeLibrary(lib));
     }
 }

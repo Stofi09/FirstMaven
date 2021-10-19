@@ -3,28 +3,28 @@ import creator.ACreator;
 import enums.Genre;
 import item.Book;
 import item.ABook;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ABookTest {
 
     @Test
     public void testABookISBN(){
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book(123,"Saturnine", (Author) DanA, Genre.FICTION);
-        assertEquals("Something wrong with ISBN",123,Saturnine.getISBN());
+        assertEquals(123,Saturnine.getISBN());
     }
 
     @Test
     public void testABookTitle(){
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
-        assertEquals("Something wrong with title","Saturnine",Saturnine.getTitle());
+        assertEquals("Saturnine",Saturnine.getTitle());
     }
 
     @Test
@@ -33,14 +33,14 @@ public class ABookTest {
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         List<Author> authors = new ArrayList<>();
         authors.add((Author) DanA);
-        assertEquals("Something wrong with authors",authors,Saturnine.getAuthors());
+        assertEquals(authors,Saturnine.getAuthors());
     }
 
     @Test
     public void testABookType(){
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
-        assertEquals("Something wrong with authors", Genre.FICTION,Saturnine.getType());
+        assertEquals( Genre.FICTION,Saturnine.getType());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class ABookTest {
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
-        assertEquals("Not borrowed",false,Saturnine.getAvailability());
+        assertEquals(false,Saturnine.getAvailability());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class ABookTest {
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
         Saturnine.setAvailable();
-        assertEquals("Not available",true,Saturnine.getAvailability());
+        assertEquals(true,Saturnine.getAvailability());
     }
 
     @Test
@@ -65,6 +65,6 @@ public class ABookTest {
         ACreator DanA = new Author("Dan Abnett");
         ABook Saturnine = new Book (123,"Saturnine", (Author) DanA, Genre.FICTION);
         Saturnine.borrowItem();
-        assertEquals("Not borrowed",Saturnine.getTime(), LocalDate.now());
+        assertEquals(Saturnine.getTime(), LocalDate.now());
     }
 }

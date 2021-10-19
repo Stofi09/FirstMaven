@@ -2,9 +2,8 @@ import creator.Director;
 import creator.ACreator;
 import enums.Genre;
 import item.*;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class MovieTest {
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         List<Director> dir = new ArrayList<>();
         dir.add((Director) MichaelB);
-        assertEquals("not the right dir", dir,PearlHarbour.getDirectors());
+        assertEquals( dir,PearlHarbour.getDirectors());
     }
 
     @Test
@@ -28,6 +27,6 @@ public class MovieTest {
         ACreator MichaelC = new Director("Michael Bay");
         PearlHarbour.addDirector((Director) MichaelC);
         dir.add((Director) MichaelC);
-        assertEquals("not the right dir", dir,PearlHarbour.getDirectors());
+        assertEquals( dir,PearlHarbour.getDirectors());
     }
 }

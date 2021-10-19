@@ -3,9 +3,8 @@ import creator.ACreator;
 import enums.Genre;
 import item.Book;
 import item.ABook;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ public class AuthorTest {
     @Test
     public void testAuthorName(){
         ACreator JoshuaB = new Author("Joshua Block");
-        assertEquals("The name was wrong","Joshua Block",JoshuaB.getName());
+        assertEquals("Joshua Block",JoshuaB.getName());
     }
 
     @Test
@@ -24,7 +23,7 @@ public class AuthorTest {
         ((Author) JoshuaB).addBook(EffectiveJava);
         List<ABook> books = new ArrayList<>();
         books.add(EffectiveJava);
-        assertEquals("The movie was wrong",books,((Author) JoshuaB).getBooks());
+        assertEquals(books,((Author) JoshuaB).getBooks());
     }
 
 }

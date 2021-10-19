@@ -2,9 +2,8 @@ import creator.Director;
 
 import enums.Genre;
 import item.Movie;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public class DirectorTest {
     @Test
     public void testDirectorName(){
         Director dir = new Director("Ben");
-        assertEquals("The name was wrong","Ben",dir.getName());
+        assertEquals("Ben",dir.getName());
     }
 
     @Test
@@ -23,7 +22,7 @@ public class DirectorTest {
         dir.addMovie(PearlHarbour);
         List<Movie> movies = new ArrayList<>();
         movies.add(PearlHarbour);
-        assertEquals("The movie was wrong",movies,dir.getMovies());
+        assertEquals(movies,dir.getMovies());
     }
 
 
