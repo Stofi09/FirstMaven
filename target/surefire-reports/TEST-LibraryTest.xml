@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="LibraryTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="LibraryTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17+35-LTS-2724"/>
@@ -43,7 +43,7 @@
     <property name="java.class.path" value="C:\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,17 +63,17 @@
   </properties>
   <testcase classname="LibraryTest" name="testEBookMap" time="0"/>
   <testcase classname="LibraryTest" name="testMovieForKidsMap" time="0"/>
-  <testcase classname="LibraryTest" name="testRentEBook" time="0.001"/>
-  <testcase classname="LibraryTest" name="testRentMovie" time="0.006"/>
+  <testcase classname="LibraryTest" name="testRentEBook" time="0"/>
+  <testcase classname="LibraryTest" name="testRentMovie" time="0.007"/>
   <testcase classname="LibraryTest" name="testLibraryName" time="0"/>
   <testcase classname="LibraryTest" name="testToString" time="0"/>
   <testcase classname="LibraryTest" name="testRentEBookNull" time="0"/>
   <testcase classname="LibraryTest" name="testLibraryAddress" time="0"/>
   <testcase classname="LibraryTest" name="testBookMap" time="0"/>
-  <testcase classname="LibraryTest" name="testRentBookNull" time="0"/>
-  <testcase classname="LibraryTest" name="testRentBook" time="0"/>
-  <testcase classname="LibraryTest" name="testRentMovieNull" time="0.001"/>
+  <testcase classname="LibraryTest" name="testRentBookNull" time="0.001"/>
+  <testcase classname="LibraryTest" name="testRentBook" time="0.001"/>
+  <testcase classname="LibraryTest" name="testRentMovieNull" time="0"/>
   <testcase classname="LibraryTest" name="testMovieMap" time="0"/>
-  <testcase classname="LibraryTest" name="testRentMovieForKidsNull" time="0"/>
-  <testcase classname="LibraryTest" name="testRentMovieForKids" time="0.001"/>
+  <testcase classname="LibraryTest" name="testRentMovieForKidsNull" time="0.002"/>
+  <testcase classname="LibraryTest" name="testRentMovieForKids" time="0"/>
 </testsuite>
