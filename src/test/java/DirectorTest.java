@@ -12,7 +12,7 @@ public class DirectorTest {
     @Test
     public void testDirectorName(){
         Director dir = new Director("Ben");
-        assertEquals("Ben",dir.getName());
+        assertEquals("Ben",dir.getName(),"That is not the right name");
     }
 
     @Test
@@ -22,7 +22,7 @@ public class DirectorTest {
         dir.addMovie(PearlHarbour);
         List<Movie> movies = new ArrayList<>();
         movies.add(PearlHarbour);
-        assertEquals(movies,dir.getMovies());
+        assertEquals(movies,dir.getMovies(),"Not in the list");
     }
 
 

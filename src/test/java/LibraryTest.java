@@ -17,13 +17,13 @@ public class LibraryTest {
     @Test
     public void testLibraryName(){
         Library lib = new Library("Name","Address");
-        assertEquals( "Name",lib.getName());
+        assertEquals( "Name",lib.getName(),"Not the right name");
     }
 
     @Test
     public void testLibraryAddress(){
         Library lib = new Library("Name","Address");
-        assertEquals( "Address",lib.getAddress());
+        assertEquals( "Address",lib.getAddress(),"not the right address");
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LibraryTest {
         lib.addBook(EffectiveJava);
         HashMap<String, ABook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(),EffectiveJava);
-        assertEquals(books,lib.getBooks());
+        assertEquals(books,lib.getBooks(),"Book is not in the list");
     }
 
     @Test
@@ -45,7 +45,7 @@ public class LibraryTest {
         lib.addEBook((EBook) EffectiveJava);
         HashMap<String, EBook> books = new HashMap<>();
         books.put(EffectiveJava.getTitle(), (EBook) EffectiveJava);
-        assertEquals(books,lib.getEBooks());
+        assertEquals(books,lib.getEBooks(),"Book is not in the list");
     }
 
     @Test
@@ -56,7 +56,7 @@ public class LibraryTest {
         lib.addMovie(PearlHarbour);
         HashMap<String, Movie> movies = new HashMap<>();
         movies.put(PearlHarbour.getTitle(), PearlHarbour);
-        assertEquals(movies,lib.getMovies());
+        assertEquals(movies,lib.getMovies(),"Movie is not in the list");
     }
 
     @Test
@@ -67,7 +67,7 @@ public class LibraryTest {
         lib.addMovieForKids(Madagascar);
         HashMap<String, MovieForKids> movies = new HashMap<>();
         movies.put(Madagascar.getTitle(), Madagascar);
-        assertEquals(movies,lib.getMovieForKid());
+        assertEquals(movies,lib.getMovieForKid(),"Movie is not in the list");
     }
 
     @Test
@@ -77,7 +77,7 @@ public class LibraryTest {
         ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.addBook(EffectiveJava);
         lib.rentBook(EffectiveJava);
-        assertEquals(false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability());
+        assertEquals(false,lib.getBooks().get(EffectiveJava.getTitle()).getAvailability(),"Rent didnt go trough");
     }
 
     @Test
@@ -86,7 +86,7 @@ public class LibraryTest {
         ACreator JoshuaB = new Author("Joshua Block");
         ABook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE);
         lib.rentBook(EffectiveJava);
-        assertEquals(null,lib.getBooks().get(EffectiveJava.getTitle()));
+        assertEquals(null,lib.getBooks().get(EffectiveJava.getTitle()),"Available");
     }
 
     @Test
@@ -96,7 +96,7 @@ public class LibraryTest {
         ABook EffectiveJava = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, Genre.SCIENCE,"url");
         lib.addEBook((EBook) EffectiveJava);lib.addBook(EffectiveJava);
         lib.rentEBook(EffectiveJava);
-        assertEquals(false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability());
+        assertEquals(false,lib.getEBooks().get(EffectiveJava.getTitle()).getAvailability(),"Rent didnt go trough");
     }
 
     @Test
@@ -115,7 +115,7 @@ public class LibraryTest {
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         lib.addMovie(PearlHarbour);
         lib.rentMovie(PearlHarbour);
-        assertEquals(false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability());
+        assertEquals(false,lib.getMovies().get(PearlHarbour.getTitle()).getAvailability(),"Rent didnt go trough");
     }
 
     @Test
@@ -134,7 +134,7 @@ public class LibraryTest {
         MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) MichaelB);
         lib.addMovieForKids(Madagascar);
         lib.rentMovie(Madagascar);
-        assertEquals(false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability());
+        assertEquals(false,lib.getMovieForKid().get(Madagascar.getTitle()).getAvailability(),"Rent didnt go trough");
     }
 
     @Test

@@ -8,6 +8,6 @@ public class ManagerTest {
     @Test
     public void managerRemove(){
         IManager mgr = new Manager("name", LocalDate.now());
-        assertEquals( false,mgr.removeCustomer());
+        assertEquals( false,mgr.removeCustomer(),"Customer was removed");
     }
 }

@@ -11,12 +11,12 @@ public class EmployeeTest {
     @Test
     public void testName(){
         AEmployee emp = new RegularEmployee("name", LocalDate.now());
-        assertEquals( "name", emp.getName());
+        assertEquals( "name", emp.getName(),"Not the right name");
     }
 
     @Test
     public void testEmploymentDate(){
         AEmployee emp = new RegularEmployee("name", LocalDate.now());
-        assertEquals( LocalDate.now(), emp.getStartOfEmployment());
+        assertEquals( LocalDate.now(), emp.getStartOfEmployment(),"Not the right date");
     }
 }

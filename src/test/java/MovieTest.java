@@ -15,7 +15,7 @@ public class MovieTest {
         Movie PearlHarbour = new Movie("Pearl Harbour", Genre.BIOGRAPHY,(Director) MichaelB);
         List<Director> dir = new ArrayList<>();
         dir.add((Director) MichaelB);
-        assertEquals( dir,PearlHarbour.getDirectors());
+        assertEquals( dir,PearlHarbour.getDirectors(), "not the right director");
     }
 
     @Test
@@ -27,6 +27,6 @@ public class MovieTest {
         ACreator MichaelC = new Director("Michael Bay");
         PearlHarbour.addDirector((Director) MichaelC);
         dir.add((Director) MichaelC);
-        assertEquals( dir,PearlHarbour.getDirectors());
+        assertEquals( dir,PearlHarbour.getDirectors(), "Director coudlnt be added");
     }
 }

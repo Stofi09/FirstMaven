@@ -13,7 +13,7 @@ public class AuthorTest {
     @Test
     public void testAuthorName(){
         ACreator JoshuaB = new Author("Joshua Block");
-        assertEquals("Joshua Block",JoshuaB.getName());
+        assertEquals("Joshua Block",JoshuaB.getName(),"Not the right name");
     }
 
     @Test
@@ -23,7 +23,7 @@ public class AuthorTest {
         ((Author) JoshuaB).addBook(EffectiveJava);
         List<ABook> books = new ArrayList<>();
         books.add(EffectiveJava);
-        assertEquals(books,((Author) JoshuaB).getBooks());
+        assertEquals(books,((Author) JoshuaB).getBooks(),"Not in the list");
     }
 
 }

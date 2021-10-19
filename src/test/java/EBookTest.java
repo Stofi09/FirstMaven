@@ -14,7 +14,7 @@ public class EBookTest {
     public void testEBookLink(){
         ACreator JoshuaB = new Author("Joshua Block");
         EBook EffectiveJavaEBook = new EBook(134685997 ,"Effective Java Ebook", (Author) JoshuaB, Genre.SCIENCE,"url");
-        assertEquals( "url",EffectiveJavaEBook.getLink());
+        assertEquals( "url",EffectiveJavaEBook.getLink(),"Not the same URL");
     }
     @Test
     public void testEBookAuthor(){
@@ -22,7 +22,7 @@ public class EBookTest {
         EBook EffectiveJavaEBook = new EBook(134685997 ,"Effective Java Ebook", (Author) JoshuaB, Genre.SCIENCE,"url");
         List<Author>authors = new ArrayList<>();
         authors.add((Author) JoshuaB);
-        assertEquals( authors,EffectiveJavaEBook.getAuthors());
+        assertEquals( authors,EffectiveJavaEBook.getAuthors(), "Not the right author");
     }
 
 }

@@ -5,8 +5,7 @@ public class ACreatorTest {
 
     @Test
     public void getNameTest(){
-        ACreator creator = new ACreator("The creator") {
-        };
+        ACreator creator = new ACreator("The creator") {};
         assertEquals("The creator",creator.getName() ,"I like big butts and I cannot lie");
     }
 }

@@ -10,7 +10,7 @@ public class MovieForKidsTest {
     public void testMovieForKidsTitle(){
         ACreator EricD = new Director("Eric Darnell");
         MovieForKids Madagascar =  new MovieForKids("Madagascar", Genre.CARTOON,(Director) EricD);
-        assertEquals( "Madagascar", Madagascar.getTitle());
+        assertEquals( "Madagascar", Madagascar.getTitle(),"Not the right title");
     }
 
 }
