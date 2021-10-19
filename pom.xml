@@ -42,8 +42,6 @@
 
         <sonar.organization>stofi09</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
-
         <sonar.projectKey>Stofi</sonar.projectKey>
 
         <!-- JaCoCo Properties -->
@@ -80,7 +78,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
             </plugin>
-
         </plugins>
     </build>
 </project>

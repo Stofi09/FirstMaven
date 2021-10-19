@@ -48,6 +48,4 @@ public class CucumberTest {
         assertEquals(string,result2);
     }
 
-
-
 }
