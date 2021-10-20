@@ -13,6 +13,7 @@ public class AuthorTest {
     @Test
     public void testAuthorName(){
         ACreator JoshuaB = new Author("Joshua Block");
+        System.out.println("asd");
         assertEquals("Joshua Block",JoshuaB.getName(),"Not the right name");
     }
 
